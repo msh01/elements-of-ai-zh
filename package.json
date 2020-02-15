@@ -2,7 +2,8 @@
   "name": "elements-of-ai-zh",
   "version": "1.0.0",
   "dependencies": {
-    "vuepress": "^0.14.8"
+    "vuepress": "^0.14.8",
+    "serialize-javascript": ">=2.1.1"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",

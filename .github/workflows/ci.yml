@@ -13,7 +13,10 @@ jobs:
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
+          #   可以在当前项目右上角的setting→
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BUILD_SCRIPT: npm install && npm run docs:build
+          #   你希望把github pages部署在哪个分支，官方推荐为gh-pages
           BRANCH: gh-pages
+          #   The folder in your repository that you want to deploy
           FOLDER: docs/.vuepress/dist
