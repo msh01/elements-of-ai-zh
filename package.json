@@ -7,20 +7,19 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "build": "vuepress build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/msh01/elements-of-ai-zh.git"
   },
   "keywords": [
-    "github pages",
-    "gh-pages",
-    "github actions"
+    "elements of ai",
+    "ai 入门",
+    "github actions 示例"
   ],
-  "author": "tangxiaomi",
-  "license": "ISC",
+  "author": "msh01",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/msh01/elements-of-ai-zh/issues"
   },
