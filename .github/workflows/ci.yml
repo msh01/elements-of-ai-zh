@@ -1,3 +1,8 @@
+# 持续集成一次运行的过程，就是一个 workflow。一个 workflow 由一个或多个 jobs 构成，每个 job 由多个 step 构成，一步步完成。
+# 每个 step 可以依次执行一个或多个命令（action
+# GitHub 只要发现.github/workflows目录里面有.yml文件，就会自动运行该文件
+# 本示例的作用是，只要发现master分支有推送代码，则自动执行本workflow，把打包编译后的文件，发布到gh-pages分支。
+# 而gh-pages又自动关联github pages ,从而实现博客自动发布的目的(预览效果：https://msh01.github.io/elements-of-ai-zh/)
 name: auto deploy vuepress to github pages
 on:
   push:
@@ -13,10 +18,12 @@ jobs:
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
-          #   可以在当前项目右上角的setting→
+          #   外部action通过ACCESS_TOKEN来获取权限访问本仓库。
+          #   可以在当前项目右上角的setting→Secrets，里面创建一个名为 ACCESS_TOKEN 的秘钥，使外部action有权限访问本仓库
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          #  编译打包的命令
           BUILD_SCRIPT: npm install && npm run docs:build
-          #   你希望把github pages部署在哪个分支，官方推荐为gh-pages
-          BRANCH: gh-pages
-          #   The folder in your repository that you want to deploy
+          #   编译打包后的文件存放的目录
           FOLDER: docs/.vuepress/dist
+          #   将编译打包后的文件部署的分支，github官方推荐为gh-pages
+          BRANCH: gh-pages
