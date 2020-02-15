@@ -7,8 +7,6 @@ module.exports = {
     base: '/elements-of-ai-zh',
     title: 'AI 基础入门教程',
     description: 'AI 基础入门教程',
-    // 默认主题设置
-    theme: '@vuepress/vue',
     themeConfig: {
         nav: [
             {
