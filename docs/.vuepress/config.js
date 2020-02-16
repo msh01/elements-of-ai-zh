@@ -7,21 +7,8 @@ module.exports = {
     base: '/elements-of-ai-zh/',
     title: 'AI 基础入门教程',
     description: 'AI 基础入门教程',
-    head:
-        [
-            ['link', {rel: 'icon', href: '/logo/small.png'}],
-            ['script', {}, `
-            var _hmt = _hmt || [];
-            (function() {
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?9dcf4bca9cc47caeef4caf5d5f982e86";
-                var s = document.getElementsByTagName("script")[0]; 
-                s.parentNode.insertBefore(hm, s);
-            })();
-            `]
-        ],
     themeConfig: {
-        logo: '/logo/small.png',
+        logo: '/logo/favicon.png',
         nav: [
             {
                 text: 'Home',
@@ -107,7 +94,16 @@ module.exports = {
         }
     },
     head: [
-        // ...
+        ['link', {rel: 'icon', href: '/logo/favicon.png'}],
+        ['script', {}, `
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?9dcf4bca9cc47caeef4caf5d5f982e86";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+            `],
         ['link', {
             rel: 'stylesheet',
             href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css'
