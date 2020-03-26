@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo/logo.svg
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /what-is-ai/1
 features:
 - title: 技术栈
   details: 使用 SpringBoot、Jpa、Security、Redis、Vue 等前后端前沿技术开发。
